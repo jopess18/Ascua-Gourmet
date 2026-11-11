@@ -1,0 +1,97 @@
+:root{
+  --negro:#0a0a0a; --cafe:#2b1408; --ladrillo:#7a3e0c; --beige:#e5ddd1; --crema:#f7f3dc; --oliva:#a89b72;
+  --titulo:"Abril Fatface",Georgia,serif;
+  --texto:"Libre Baskerville",Georgia,"Times New Roman",serif;
+  --ui:"Montserrat",system-ui,Arial,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:5rem}
+body{margin:0;font-family:var(--texto);line-height:1.7;color:var(--cafe);background:var(--beige)}
+img{max-width:100%;height:auto;display:block}
+a{color:var(--ladrillo)}
+:focus-visible{outline:3px solid var(--ladrillo);outline-offset:3px}
+.skip-link{position:absolute;left:1rem;top:-4rem;background:var(--negro);color:var(--crema);padding:.6rem 1rem;z-index:20}
+.skip-link:focus{top:1rem}
+.contenedor{max-width:68rem;margin:0 auto;padding:3rem 1.25rem}
+.angosto{max-width:34rem}
+h1,h2,h3{font-family:var(--titulo);font-weight:400;line-height:1.1}
+h2{font-size:clamp(2rem,6vw,3rem);margin:0 0 1rem}
+.btn{display:inline-block;font-family:var(--ui);font-weight:700;font-size:.9rem;letter-spacing:.04em;text-transform:uppercase;text-decoration:none;background:var(--ladrillo);color:var(--crema);padding:.8rem 1.4rem;border:0;border-radius:4px;cursor:pointer}
+.btn:hover{background:var(--cafe);color:var(--crema)}
+.btn-crema{background:var(--crema);color:var(--cafe)}
+.btn-crema:hover{background:var(--oliva);color:var(--negro)}
+
+/* Encabezado (móvil primero) */
+.site-header{position:sticky;top:0;z-index:10;background:var(--beige);border-bottom:1px solid var(--oliva)}
+.bar{max-width:80rem;margin:0 auto;padding:.5rem 1.25rem;display:flex;align-items:center;gap:1rem;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:.6rem;text-decoration:none;color:var(--cafe);font-family:var(--titulo);font-size:1.8rem;margin-right:auto}
+.brand img{width:44px;height:44px}
+.menu-btn{background:none;border:2px solid var(--cafe);color:var(--cafe);font-size:1.4rem;line-height:1;padding:.3rem .6rem;border-radius:4px;cursor:pointer}
+#menu{display:none;width:100%;order:5}
+#menu.abierto{display:block}
+#menu ul{list-style:none;margin:0;padding:0}
+#menu a{display:block;padding:.8rem 0;font-family:var(--ui);font-weight:700;font-size:.85rem;letter-spacing:.05em;text-transform:uppercase;text-decoration:none;color:var(--cafe);border-bottom:1px solid rgba(43,20,8,.15)}
+#menu a:hover{color:var(--ladrillo)}
+.bar .btn{padding:.55rem 1rem}
+
+/* Hero */
+.hero{background:var(--negro);color:var(--crema);display:grid;gap:1.5rem;padding:2.5rem 1.25rem;align-items:center}
+.kicker{font-family:var(--ui);font-weight:700;letter-spacing:.12em;text-transform:uppercase;font-size:.78rem;color:var(--oliva);margin:0 0 .5rem}
+.hero h1{font-size:clamp(2.4rem,9vw,4.6rem);margin:0 0 1rem}
+.hero h1 span{display:block;font-family:var(--ui);font-weight:800;text-transform:uppercase;font-size:.7em;letter-spacing:-.01em}
+.hero-img{margin:0;justify-self:center;width:min(100%,26rem);aspect-ratio:1;border-radius:50%;overflow:hidden}
+.hero-img img{width:100%;height:100%;object-fit:cover}
+
+/* Secciones */
+.claro{background:var(--beige)}
+.oscuro{background:var(--cafe);color:var(--crema)}
+.oscuro h2{color:var(--crema)}
+.dos-col{display:grid;gap:2rem}
+.valores{padding-left:1.2rem}
+.dato{background:var(--crema);border-left:4px solid var(--ladrillo);padding:1.25rem;align-self:start}
+.dato p{margin:0}
+.dato .num{font-family:var(--titulo);font-size:3.5rem;color:var(--ladrillo);line-height:1}
+
+/* Carta */
+.filtros{display:flex;flex-wrap:wrap;gap:.5rem;margin:0 0 1.5rem}
+.filtro{font-family:var(--ui);font-weight:700;font-size:.8rem;text-transform:uppercase;letter-spacing:.05em;background:transparent;color:var(--crema);border:2px solid var(--oliva);padding:.5rem 1rem;border-radius:999px;cursor:pointer}
+.filtro.activo,.filtro:hover{background:var(--oliva);color:var(--negro)}
+.platos{display:grid;gap:1.25rem;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr))}
+.plato{background:var(--negro);border:1px solid var(--ladrillo);padding:1rem;display:flex;flex-direction:column}
+.plato[hidden]{display:none}
+.plato figure{margin:0}
+.plato figcaption{font-size:.8rem;color:var(--oliva);margin-top:.4rem}
+.plato h3{font-size:1.5rem;margin:.8rem 0 .3rem;color:var(--crema)}
+.plato p{margin:0 0 1rem;font-size:.92rem}
+.plato data{margin-top:auto;font-family:var(--ui);font-weight:800;font-size:1.3rem;color:var(--oliva)}
+
+/* Opiniones, formulario, contacto */
+.resenas{display:grid;gap:1.25rem}
+.resenas article{background:var(--crema);padding:1.25rem;border-left:4px solid var(--ladrillo)}
+blockquote{margin:0 0 .5rem;font-style:italic}
+.autor{margin:0;font-family:var(--ui);font-weight:700;font-size:.8rem;text-transform:uppercase}
+form{display:grid;gap:.5rem}
+label{font-family:var(--ui);font-weight:700;font-size:.8rem;text-transform:uppercase;letter-spacing:.05em}
+input,select{font:inherit;padding:.7rem;border:2px solid var(--oliva);border-radius:4px;background:var(--crema);color:var(--cafe);width:100%}
+form .btn{margin-top:.8rem}
+#msg{min-height:1.5rem;margin:.5rem 0 0;font-family:var(--ui);font-size:.9rem;color:var(--crema)}
+address{font-style:normal;line-height:2}
+.site-footer{background:var(--negro);color:var(--beige)}
+.site-footer .contenedor{padding:2rem 1.25rem}
+.site-footer p{margin:0 0 .4rem}
+
+/* Tableta */
+@media (min-width:48rem){
+  .hero{grid-template-columns:1.1fr 1fr;padding:3.5rem 2rem}
+  .dos-col{grid-template-columns:2fr 1fr}
+  .resenas{grid-template-columns:1fr 1fr}
+}
+/* Computador */
+@media (min-width:64rem){
+  .menu-btn{display:none}
+  #menu{display:block;width:auto;order:0;margin:0 auto}
+  #menu ul{display:flex;gap:1.5rem}
+  #menu a{border:0;padding:.5rem 0}
+  .hero{padding:4.5rem max(2rem,calc((100% - 72rem)/2))}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
